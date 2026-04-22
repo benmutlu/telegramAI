@@ -2,20 +2,21 @@
 
 ## Released
 
-- `captcha-guard`: private chat verification with image captcha and lockout logic
+- `captcha-guard`: private chat verification with image captcha, SQLite state, retry tracking, and temporary lockout logic
 
-## Next ideas
+## Planned addons
 
-- `welcome-gate`: group join verification and timed unlocks
-- `link-shield`: suspicious link screening before message approval
-- `keyword-router`: route incoming chats based on topic detection
-- `lead-qualifier`: collect structured lead data in Telegram
-- `broadcast-lab`: safer segmented broadcast tooling
+- `welcome-gate`: verify new group members before they can participate
+- `link-shield`: detect and slow down suspicious links in chats
+- `keyword-router`: route user messages into specialized flows based on detected intent
+- `lead-qualifier`: collect structured intake data from Telegram users
+- `broadcast-lab`: safer segmented broadcast tooling for Telegram operators
 
-## Platform improvements
+## Shared platform goals
 
-- Shared settings schema across addons
-- Shared admin dashboard
-- Provider integrations for Turnstile and reCAPTCHA
-- API mode for third-party bots
+- common settings conventions across addons
+- shared storage patterns
+- API-backed verification modes
+- admin dashboard foundations
+- provider integrations such as reCAPTCHA and Turnstile
 

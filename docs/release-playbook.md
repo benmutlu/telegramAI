@@ -1,19 +1,22 @@
 # Release Playbook
 
-## For each addon
+This document describes the expected release pattern for new Telegram addons in this repository.
 
-1. Define the smallest useful scope.
-2. Create the addon folder from the template.
-3. Implement the core bot or service.
-4. Add `.env.example`, README, and screenshots or examples when useful.
-5. Verify the happy path locally.
+## Release flow
+
+1. Choose one Telegram problem worth solving.
+2. Keep the first version as small as possible.
+3. Build the addon in its own directory.
+4. Add configuration, setup, and operating notes.
+5. Verify that the addon runs locally.
 6. Update the root catalog and roadmap.
+7. Publish the work in a clean, documented state.
 
-## Quality bar
+## Minimum bar for release
 
-- Runnable from a clean checkout
-- Human-readable setup docs
-- Sensible default configuration
-- No secrets committed
-- Clear statement of limits and next steps
+- runnable from a fresh checkout
+- documented configuration
+- no secrets in the repository
+- clear explanation of purpose
+- clear explanation of current limits
 
