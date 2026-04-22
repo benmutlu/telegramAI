@@ -4,7 +4,7 @@ Open-source Telegram addons, released as small standalone products.
 
 Telegram Addon Studio is a public repository for building and documenting reusable Telegram bot extensions. Instead of keeping ideas as one-off scripts, this repo turns them into structured, self-hostable addons with setup instructions, predictable configuration, and a clear roadmap.
 
-The long-term goal is to ship one Telegram-focused addon at a time, keep each release narrow and practical, and build a catalog of open-source components that can eventually evolve into larger products, hosted services, or SDKs.
+The long-term goal is to ship Telegram-focused addons continuously, keep each release narrow and practical, and build a catalog of open-source components that can eventually evolve into larger products, hosted services, or SDKs.
 
 ## What this repository is
 
@@ -34,9 +34,11 @@ templates/   Starter template for the next addon
 
 ## Current release
 
-The first shipped addon is [`captcha-guard`](./addons/captcha-guard/README.md).
+The currently shipped addons are:
 
-`captcha-guard` is a private-chat verification bot for Telegram. It sends an image captcha, validates the user's answer, tracks failed attempts in SQLite, and temporarily locks the user after too many failures.
+- [`captcha-guard`](./addons/captcha-guard/README.md): image-based private chat verification with retry limits and lockouts
+- [`keyword-router`](./addons/keyword-router/README.md): keyword-based message routing for Telegram private chats
+- [`lead-qualifier`](./addons/lead-qualifier/README.md): structured lead intake for Telegram private chats
 
 ## How the studio works
 
@@ -47,7 +49,7 @@ The studio follows a repeatable release loop:
 3. Build the smallest useful version.
 4. Add configuration, docs, and example setup.
 5. Ship it publicly.
-6. Move on to the next addon while keeping the catalog coherent.
+6. Repeat the process for the next addon release.
 
 This keeps the repo practical. Every addon should be understandable in isolation, but the patterns should also compound over time.
 
@@ -69,10 +71,12 @@ If an addon is too large, it should be split into layers or moved into its own d
 | Addon | Status | Summary |
 | --- | --- | --- |
 | `captcha-guard` | Released | Image-based private chat verification with retry limits and lockouts |
+| `keyword-router` | Released | Keyword-based message routing with SQLite logging |
+| `lead-qualifier` | Released | Structured private chat intake flow with SQLite-backed lead capture |
 
 ## Getting started
 
-If you want to run the current addon immediately:
+If you want to run one of the current addons immediately:
 
 ```bash
 cd addons/captcha-guard
@@ -116,6 +120,8 @@ The intention is to make the repository readable both for users who want to self
 
 The broader idea behind Telegram Addon Studio is consistent shipping. The repository is meant to grow through frequent releases, where each addon is fully documented instead of half-finished and hidden in a private folder.
 
+The current operating target is to add two new addon projects per day so that the repository visibly grows as a public product studio, not as a slow-moving monolith.
+
 Planned categories include:
 
 - verification
@@ -141,4 +147,3 @@ See [docs/vision.md](./docs/vision.md) for the long-term direction of the studio
 ## License
 
 MIT, see [LICENSE](./LICENSE).
-
